@@ -1,0 +1,18 @@
+{
+  "name": "project-rw13",
+  "version": "1.0.0",
+  "description": "Sistem Informasi Kependudukan & Administrasi RW 13 Margahayu Bekasi Timur (Frontend Vite + Backend Express MySQL)",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "start:backend": "cd backend && npm start",
+    "db:init": "cd backend && node scripts/init-db.js",
+    "db:hash": "cd backend && node scripts/hash-password.js",
+    "db:akun": "cd backend && node scripts/buat-akun.js",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "dependencies": {
+    "lucide-react": "^1.71.0",
+    "react-router": "^8.5.1"
+  }
+}

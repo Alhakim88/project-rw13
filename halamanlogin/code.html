@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Masuk - Data Penduduk RW 13</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style data-purpose="custom-theme">
+    /* Subtle custom styling to enhance the dark minimal theme */
+    body {
+      background-color: #12161f;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+<!-- BEGIN: MainContainer -->
+<main class="w-full max-w-sm" data-purpose="login-wrapper">
+<!-- BEGIN: HeaderSection -->
+<header class="flex items-center justify-center space-x-4 mb-6">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXKszIiHzXX4i4woVAAN8UMWVrVNV3uRsGgveH6r_I1SQDlWjzNkMJHpGnADfxSDHde_hYwuW4R-jlqXQqwtXWgF6Bxj0bvhBkq8OwHj8NMRQC_s_sOcWeVcCXZK87tpgU_yy-nFXe-wbOEv4oivWZwTElvIkUpXYaWk0eHqMkK_roQ-oL-jv98Adezk7eGXnhWgjKFEJehvDFsatD0StkW8kqmLCkXudeyNz1cP2dTo50dfcCNr56" alt="Logo Kota Patriot" class="w-12 h-14 object-contain shrink-0">
+<div class="text-left">
+<h2 class="text-base font-bold tracking-tight text-white whitespace-nowrap">DATA KEPENDUDUKAN RW 13</h2>
+<p class="text-xs text-slate-400 mt-1"></p><div class="text-xs font-normal text-slate-400 whitespace-nowrap">KELURAHAN MARGAHAYU KECAMATAN BEKASI TIMUR</div><div class="text-xs text-slate-400 whitespace-nowrap"><span>Jl. Cendrawasih Raya No. 1 RT. 007 RW. 013</span></div><p></p>
+</div>
+</header>
+<!-- END: HeaderSection -->
+<!-- BEGIN: LoginForm -->
+<div class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-2xl" data-purpose="form-card">
+<form class="space-y-4" id="loginForm" onsubmit="event.preventDefault(); const fb = document.getElementById('feedbackMessage'); if(fb){ fb.classList.remove('opacity-0'); fb.textContent = 'Memverifikasi data...'; } setTimeout(() =&gt; { window.location.href = '{{DATA:SCREEN:SCREEN_2}}'; }, 400);" action="{{DATA:SCREEN:SCREEN_2}}">
+<!-- Field 1: Email / NIK Input -->
+<div data-purpose="input-group-identity">
+<label class="block text-sm font-medium text-slate-300 mb-1" for="identityInput">
+            Email / NIK
+          </label>
+<input class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm" id="identityInput" name="identity" placeholder="akg448@gmail.com" required="" type="text" value="sari@rw13.desa.id">
+</div>
+<!-- Field 2: Password Input with Toggle Button -->
+<div data-purpose="input-group-password">
+<label class="block text-sm font-medium text-slate-300 mb-1" for="passwordInput">
+            Password
+          </label>
+<div class="flex items-center space-x-2">
+<!-- Password input field -->
+<input class="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm tracking-wider" id="passwordInput" name="password" placeholder="Masukkan password" required="" type="password">
+<!-- Button 'Lihat' inspired by the reference layout -->
+<button id="togglePasswordBtn" type="button" aria-label="Lihat Password" onclick="const pw=document.getElementById('passwordInput'); const eyeOpen=document.getElementById('eyeOpenIcon'); const eyeClosed=document.getElementById('eyeClosedIcon'); if(pw.type==='password'){ pw.type='text'; eyeOpen.classList.remove('hidden'); eyeClosed.classList.add('hidden'); } else { pw.type='password'; eyeOpen.classList.add('hidden'); eyeClosed.classList.remove('hidden'); }" class="px-3 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-400 hover:text-white rounded-md transition-colors shrink-0 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500"><svg id="eyeOpenIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg><svg id="eyeClosedIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18"></path></svg></button>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-2 text-center" data-purpose="action-group">
+<button class="w-full sm:w-auto px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white font-medium text-sm rounded-md transition-colors shadow-sm" type="submit">
+            Masuk
+          </button>
+</div>
+</form>
+<!-- Feedback / Success Message inspired by sample -->
+<div class="mt-4 pt-4 border-t border-slate-800 text-center text-xs text-slate-400"><p>Belum punya akun? <a href="{{DATA:SCREEN:SCREEN_9}}" class="text-blue-400 hover:text-blue-300 font-semibold underline decoration-slate-600 underline-offset-2 transition-colors">Daftar di sini</a></p></div>
+</div>
+<!-- END: LoginForm -->
+<!-- Footer Note -->
+<footer class="mt-6 text-center text-xs text-slate-500">© 2026 Pengurus RW 13 Kel. Margahayu. Sistem Administrasi &amp; Data Kependudukan.</footer>
+</main>
+<!-- END: MainContainer -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="password-toggle-script">
+    // Fungsi untuk mengubah visibilitas password (Show / Hide)
+    function togglePasswordVisibility() {
+      const passwordField = document.getElementById('passwordInput');
+      const toggleBtn = document.getElementById('togglePasswordBtn');
+
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        toggleBtn.textContent = 'Tutup';
+        toggleBtn.classList.add('bg-blue-600', 'text-white');
+        toggleBtn.classList.remove('bg-slate-700', 'text-slate-200');
+      } else {
+        passwordField.type = 'password';
+        toggleBtn.textContent = 'Lihat';
+        toggleBtn.classList.remove('bg-blue-600', 'text-white');
+        toggleBtn.classList.add('bg-slate-700', 'text-slate-200');
+      }
+    }
+  </script>
+<script data-purpose="form-submission-handler">
+    // Fungsi sederhana saat tombol Masuk ditekan
+    function handleLogin() {
+      const feedback = document.getElementById('feedbackMessage');
+      
+      // Memberikan efek animasi berkedip sederhana saat tombol masuk ditekan
+      feedback.classList.remove('opacity-100');
+      feedback.classList.add('opacity-0');
+
+      setTimeout(() => {
+        feedback.textContent = 'Berhasil masuk. Selamat datang!';
+        feedback.classList.remove('opacity-0');
+        feedback.classList.add('opacity-100');
+      }, 150);
+    }
+  </script>
+<!-- END: InteractiveScripts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

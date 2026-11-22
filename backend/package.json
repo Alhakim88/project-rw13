@@ -1,0 +1,42 @@
+{
+  "name": "backend-rw13",
+  "version": "1.0.0",
+  "description": "Backend API Sistem Informasi Kependudukan RW 13 - Kelurahan Margahayu, Bekasi Timur",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "db:init": "node scripts/init-db.js",
+    "db:hash": "node scripts/hash-password.js",
+    "db:akun": "node scripts/buat-akun.js",
+    "test": "echo \"Belum ada test\" && exit 0"
+  },
+  "keywords": [
+    "rw13",
+    "kependudukan",
+    "bekasi",
+    "express",
+    "mysql"
+  ],
+  "author": "RW 13 Margahayu",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "allowScripts": {
+    "bcrypt@5.1.1": true
+  }
+}
